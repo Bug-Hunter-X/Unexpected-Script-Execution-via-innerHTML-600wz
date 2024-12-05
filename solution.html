@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Safe HTML Update</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Safe method: Create a paragraph element and append it
+    let newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a paragraph.";
+    document.getElementById("myDiv").appendChild(newParagraph);
+
+    //Alternative using innerHTML safely:
+    //document.getElementById('myDiv').innerHTML = '<p>This is a paragraph</p>';  //still use it but you must sanitize the input
+  </script>
+</body>
+</html>
