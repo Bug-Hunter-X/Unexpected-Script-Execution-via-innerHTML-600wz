@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrect use of innerHTML, leading to unexpected behavior
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph.</p><script>alert('This script will execute!');</script>"; 
+  </script>
+</body>
+</html>
